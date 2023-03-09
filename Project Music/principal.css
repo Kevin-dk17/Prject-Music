@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+html,
+body{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+}
+
+body{
+    background-color: black;
+    background-attachment: fixed;
+}
+
+.header-block{
+    background-color: #6c733d3d;
+    padding-bottom: 5px;
+    border: 1px solid #6c733d88;
+    border-radius: 5px;
+    display: flex;
+}
+
+.header-block button{
+    font: bolder 20px 'Play';
+    border-radius: 5px;
+    border: 2px solid #9DA65D;
+    text-align: center;
+    padding-bottom: 27px;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #6c733d;
+    color: white;
+    width: 100px;
+    height: 30px;
+}
+
+.header-block button:hover{
+    background-color: #9DA65D;
+}
+
+.header-block button:focus{
+    background-color: #9DA65D;
+    border: 2px solid #6c733d;
+    outline: transparent;
+}
+
+.header-block button > section{
+    display: none;
+}
+
+.header-block button:hover > section{
+    display: block;
+}
+
+.header-block button:focus > section{
+    display: block;
+}
+
+.menu{
+    padding-top: 5px;
+}
+
+.menu div{
+    padding-top: 5px;
+    animation: down 500ms;
+    animation-fill-mode: backwards;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #6c733d;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 90px;
+    background-color: #9DA65D;
+}
+
+.menu div:nth-child(2){
+    animation-delay: 150ms;
+}
+
+.menu div:nth-child(3){
+    animation-delay: 300ms;
+}
+
+.menu div:nth-child(4){
+    animation-delay: 450ms;
+}
+
+.menu div:hover{
+    background-color: #6c733d;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.header-block h1{
+    color: #6c733d;
+    font: normal 50px 'Fredoka One';
+    text-shadow: 1px 1px 2px white;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: 45%;
+}
+
+footer{
+    bottom: 0%;
+    position: fixed;
+    background-color: #6c733d3d;
+    border: 1px solid #6c733d88;
+    width: 99.9%;
+    height: 40px;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    display: inline;
+}
+
+.footer-block button{
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #9DA65D;
+    text-shadow: 1px 1px 2px white;
+}
+
+.previous{
+    font-size: 30px;
+    position: relative;
+    bottom: 12px;
+    right: 10px;
+}
+
+.play{
+    font-size: 50px;
+    position: relative;
+    bottom: 5px;
+}
+
+.next{
+    font-size: 30px;
+    position: relative;
+    bottom: 12px;
+    left: 10px;
+}
+
+.footer-block button:focus{
+    color: #6c733d;
+}
+
+footer .progress-bar{
+    height: 6px;
+    width: 400px;
+    background-color: white;
+    display: flex;
+    position: relative;
+    margin-left: 180px;
+    bottom: 39px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+footer .progress-current{
+    height: inherit;
+    width: 0%;
+    background-color: lightgrey;
+    border-radius: 50px;
+}
+
+footer .duration{
+    font: bold 23px 'Play';
+    color: #9DA65D;
+    text-shadow: 1px 1px 2px white;
+    display: flex;
+    position: relative;
+    margin-left: 590px;
+    bottom: 58px;
+    border-radius: 50px;
+}
+
+footer .like{
+    text-shadow: 1px 1px 2px #6c733d;
+    font-size: 35px;
+    display: flex;
+    position: relative;
+    margin-left: 1750px;
+    bottom: 91px;
+}
+
+@keyframes down{
+    from{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    50%{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@media (min-width: 360px) and (max-width: 812px){
+    .header-block{
+        background-color: #6c733d3d;
+        padding-bottom: 0px;
+        border: 1px solid #6c733d88;
+        border-radius: 5px;
+        display: flex;
+    }
+
+    .header-block h1{
+        color: #6c733d;
+        font: normal 40px 'Fredoka One';
+        text-shadow: 1px 1px 2px white;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        margin-left: 2%;
+        margin-right: 31.5%;
+    }
+
+    .header-block button{
+        border-radius: 0px;
+        font: bolder 16px 'Play';
+        border: 1px solid #9DA65D;
+        text-align: center;
+        padding-top: 17px;
+        right: 0%;
+        top: 0%;
+        background-color: #6c733d;
+        color: white;
+        width: 80px;
+        height: 55px;
+        position: absolute;
+    }
+
+    .menu{
+        padding-top: 15px;
+    }
+
+    .menu div{
+        padding-top: 5px;
+        animation: down 500ms;
+        animation-fill-mode: backwards;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #6c733d;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 65px;
+        background-color: #9DA65D;
+    }
+
+    footer{
+        bottom: 0%;
+        background-color: #6c733d3d;
+        border: 1px solid #6c733d88;
+        width: 99.5%;
+        height: 40px;
+        border-radius: 5px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        display: inline;
+    }
+
+    .footer-block button{
+        left: 5px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: #9DA65D;
+        text-shadow: 1px 1px 2px white;
+    }
+    
+    .previous{
+        font-size: 20px;
+        position: relative;
+        bottom: 12px;
+        right: 5px;
+    }
+    
+    .play{
+        font-size: 40px;
+        position: relative;
+        bottom: 5px;
+    }
+    
+    .next{
+        font-size: 20px;
+        position: relative;
+        bottom: 12px;
+        left: 5px;
+    }
+
+    footer .progress-bar{
+        height: 6px;
+        width: 200px;
+        background-color: white;
+        display: flex;
+        position: relative;
+        margin-left: 150px;
+        bottom: 20px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    
+    footer .progress-current{
+        height: inherit;
+        width: 0%;
+        background-color: lightgrey;
+        border-radius: 50px;
+    }
+    
+    footer .duration{
+        font: bold 20px 'Play';
+        color: #9DA65D;
+        text-shadow: 1px 1px 2px white;
+        display: flex;
+        position: relative;
+        margin-left: 148px;
+        bottom: 55px;
+        border-radius: 50px;
+    }
+
+    footer .like{
+        text-shadow: 1px 1px 2px #6c733d;
+        font-size: 20px;
+        display: flex;
+        position: relative;
+        margin-left: 320px;
+        bottom: 78px;
+    }
+
+}

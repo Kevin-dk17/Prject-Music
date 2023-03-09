@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+html,
+body{
+    background-image: linear-gradient(to bottom, black, #202426);
+    background-attachment: fixed;
+    align-items: center;
+}
+
+section {
+    animation: fade 1s;
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 400px;
+}
+
+h1{
+    margin: auto;
+    text-shadow: 1px 1px 2px white;
+    text-align: center;
+    font: normal 70px 'Fredoka One';
+    color: #6c733d;
+}
+
+form{
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.form-hide{
+    animation: down 500ms;
+    animation-fill-mode: backwards;
+}
+
+form .input-block input:nth-child(1){
+    margin-bottom: 10px;
+    animation: move 500ms;
+    animation-delay: 250ms;
+    animation-fill-mode: backwards;
+}
+
+form .input-block input:nth-child(2){
+    margin-bottom: 10px;
+    animation: move 500ms;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+}
+
+form .input-block input{
+    font: bold 16px 'Play';
+    background-color: #6c733d;
+    color: white;
+    text-align: center;
+    min-width: 250px;
+    border-radius: 5px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #9DA65D;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+form .input-block input:hover{
+    background-color: #9DA65D;
+}
+
+form .input-block input:focus{
+    font-size: 20px;
+    background-color: #9DA65D;
+    width: 300px;
+}
+
+form .input-block input::-webkit-input-placeholder{
+    color: white;
+    font: bolder 16px 'Play';
+    opacity: 0.5;
+}
+
+button{
+    font: bold 16px 'Play';
+    cursor: pointer;
+    margin-top: 130px;
+    background-color: #6C733D;
+    color: white;
+    border: none;
+    width: 200px;
+    padding: 20px;
+    border-radius: 50px;
+    outline-color: transparent;
+    animation: up 500ms;
+    animation-delay: 250ms;
+    animation-fill-mode: backwards;
+}
+
+button:focus{
+    background-color: #9DA65D;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+
+}
+
+@keyframes move{
+    from{
+        opacity: 0;
+        transform: translateX(-35%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(35%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+
+@keyframes down{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(100vh);
+    }
+}
+
+@media (min-width: 360px) and (max-width: 812px){
+    h1{
+        margin: auto;
+        text-align: center;
+        font: normal 60px 'Fredoka One';
+    }
+
+    section {
+        top: 120px;
+        width: 300px;
+        height: 350px;
+    }
+
+    form .input-block input{
+        min-width: 200px;
+    }
+
+    form .input-block input:focus{
+        width: 250px;
+    }
+
+    button{
+        margin-top: 90px;
+        width: 150px;
+    }
+}
